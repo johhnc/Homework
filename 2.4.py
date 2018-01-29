@@ -148,8 +148,12 @@ print("Length:", len(nums))
 
 # 2.4.58
 print("Q58 is:")
-print("Number Lot:", sum(nums) / list(nums))
-
+nums = [6, 2, 8, 0]
+s = "6280"
+i = int(s)
+i2 = i + 1
+lot = sum(nums) / i2
+print("Number Lot:", lot)
 # 2.4.60
 print("Q60 is:")
 L = ["one", "for", "all"]
@@ -254,8 +258,9 @@ print(ships[-5:2])
 # 2.4.102 -- works but retains punctuation
 print("Q102 is:")
 sentence = input("Enter a sentence: ")
-print("First word:", sentence[:1])
-print("Last word", sentence[-1:])
+sentence2 = sentence.split()
+print("First word:", sentence2(1))
+print("Last word", sentence2(-1))
 
 # 2.4.104
 print("104 is:")

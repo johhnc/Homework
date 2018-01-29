@@ -149,11 +149,12 @@ print("Length:", len(nums))
 # 2.4.58
 print("Q58 is:")
 nums = [6, 2, 8, 0]
-s = "6280"
-i = int(s)
-i2 = i + 1
+nums2 = "6280"
+i = int(nums2)
+i2 = 1 + i
 lot = sum(nums) / i2
 print("Number Lot:", lot)
+
 # 2.4.60
 print("Q60 is:")
 L = ["one", "for", "all"]

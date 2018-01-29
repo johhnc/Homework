@@ -258,8 +258,24 @@ fullName = input("Enter a 3-part name: ")
 name = fullName.split()
 print("Middle Name: ", name[1])
 
+# Programing Project 2
+print("Programing Project 2 is:")
+A = float(input("Enter amount of loan: "))
+r = float(input("Enter intrest rate (%):  "))
+n = float(input("Enter number of years:   "))
+i = r / 1200
+monthlyPayment = i / (1 - (1 + i) ** (-12 * n)) * A
+monthlyPayment = round(monthlyPayment, 2)
+print("Monthly Payment:", "$", monthlyPayment)
 
-
+# Programing Project 4
+print("Programing project 4 is:")
+price = float(input("Price of item: "))
+print("Enter weight of item in ponds and ounces separately")
+pounds = float(input("Enter Pounds: "))
+ounces = float(input("Enter Ounces: "))
+pounds1 = pounds * 16
+totalOunces = pounds1 + ounces
 
 
 

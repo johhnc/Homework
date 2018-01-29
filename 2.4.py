@@ -246,6 +246,11 @@ print("Q92 is:")
 ships = ["Nina", "Pinta", "Santa Maria"]
 print(ships[-5:2])
 
+# 2.4.102
+print("Q102 is:")
+sentence = input("Enter a sentence: ")
+print("First word:", sentence[:1])
+print("Last word", sentence[:-1])
 
 
 

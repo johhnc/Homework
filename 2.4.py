@@ -246,11 +246,19 @@ print("Q92 is:")
 ships = ["Nina", "Pinta", "Santa Maria"]
 print(ships[-5:2])
 
-# 2.4.102
+# 2.4.102 -- works but retains punctuation
 print("Q102 is:")
 sentence = input("Enter a sentence: ")
 print("First word:", sentence[:1])
-print("Last word", sentence[:-1])
+print("Last word", sentence[-1:])
+
+# 2.4.104
+print("104 is:")
+fullName = input("Enter a 3-part name: ")
+name = fullName.split()
+print("Middle Name: ", name[1])
+
+
 
 
 

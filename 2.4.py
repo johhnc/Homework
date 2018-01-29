@@ -276,6 +276,8 @@ pounds = float(input("Enter Pounds: "))
 ounces = float(input("Enter Ounces: "))
 pounds1 = pounds * 16
 totalOunces = pounds1 + ounces
+perOunce = totalOunces / price
+print(perOunce)
 
 
 

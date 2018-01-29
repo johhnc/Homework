@@ -6,8 +6,8 @@ pounds = int(input("Enter Pounds: "))
 ounces = int(input("Enter Ounces: "))
 pounds1 = pounds * 16
 totalOunces = pounds1 + ounces
-perOunce = totalOunces / price
-print(round(perOunce, 2))
+perOunce = price / totalOunces
+print("Price Per Ounce:", "$" ,round(perOunce, 2))
 
 
 

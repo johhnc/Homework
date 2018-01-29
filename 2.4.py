@@ -134,7 +134,7 @@ print(list1[-8:-1])
 print("Q54 is:")
 print(list1[1:-1])
 
-# list numbs
+# list for numbs
 nums = [6, 2, 8, 0]
 
 # 2.4.56
@@ -272,12 +272,13 @@ print("Monthly Payment:", "$", monthlyPayment)
 print("Programing project 4 is:")
 price = float(input("Price of item: "))
 print("Enter weight of item in ponds and ounces separately")
-pounds = float(input("Enter Pounds: "))
-ounces = float(input("Enter Ounces: "))
+pounds = int(input("Enter Pounds: "))
+ounces = int(input("Enter Ounces: "))
 pounds1 = pounds * 16
 totalOunces = pounds1 + ounces
-perOunce = totalOunces / price
-print(perOunce)
+perOunce = price / totalOunces
+print("Price Per Ounce:", "$" ,round(perOunce, 2))
+
 
 
 

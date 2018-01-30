@@ -103,6 +103,9 @@ print("Q44 is:")
 del states[1]
 states.insert(1, "Commonweath of Pennsylvania")
 print(states[:3])
+
+#needed to reset states due to all the additions and removals from above
+
 states = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecticut", "Massachusetts", "Maryland",
           "South Carolina", "New Hampshire", "Virginia", "New York", "North Carolina", "Rhode Island", "Vermont",
           "Kentucky", "Tennessee", "Ohio", "Louisiana", "Indiana", "Mississippi", "Illinois", "Alabama", "Maine",
@@ -148,7 +151,7 @@ print("Length:", len(nums))
 
 # 2.4.58
 print("Q58 is:")
-print("Number Lot:", sum(nums) / list(nums))
+print("Number Lot:", sum(nums) / len(nums))
 
 # 2.4.60
 print("Q60 is:")
@@ -255,8 +258,9 @@ print(ships[-5:2])
 print("Q102 is:")
 sentence = input("Enter a sentence: ")
 sentence2 = sentence.split()
-print("First word:", sentence2(1))
-print("Last word", sentence2(-1))
+print("First word:", sentence2[0])
+print("Last word:", sentence2[-1])
+
 
 # 2.4.104
 print("104 is:")
@@ -267,7 +271,7 @@ print("Middle Name: ", name[1])
 # Programing Project 2
 print("Programing Project 2 is:")
 A = float(input("Enter amount of loan: "))
-r = float(input("Enter intrest rate (%):  "))
+r = float(input("Enter interest rate (%):  "))
 n = float(input("Enter number of years:   "))
 i = r / 1200
 monthlyPayment = i / (1 - (1 + i) ** (-12 * n)) * A
@@ -283,7 +287,7 @@ ounces = int(input("Enter Ounces: "))
 pounds1 = pounds * 16
 totalOunces = pounds1 + ounces
 perOunce = price / totalOunces
-print("Price Per Ounce:", "$" ,round(perOunce, 2))
+print("Price Per Ounce:", "$", round(perOunce, 2))
 
 
 

@@ -135,9 +135,8 @@ print("Q50 is:")
 print(list1[:8])
 
 # 2.4.52
-print("Q50 is:")
+print("Q52 is:")
 print(list1[-8:-1])
-
 #2.4.54
 print("Q54 is:")
 print(list1[1:-1])

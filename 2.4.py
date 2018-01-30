@@ -148,12 +148,7 @@ print("Length:", len(nums))
 
 # 2.4.58
 print("Q58 is:")
-nums = [6, 2, 8, 0]
-nums2 = "6280"
-i = int(nums2)
-i2 = 1 + i
-lot = sum(nums) / i2
-print("Number Lot:", lot)
+print("Number Lot:", sum(nums) / list(nums))
 
 # 2.4.60
 print("Q60 is:")

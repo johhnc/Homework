@@ -89,3 +89,32 @@ print(isinstance(32, int))
 print("Q38 is:")
 print("knight".startswith('n'))
 
+# 3.1.40
+print("Q40 is:")
+print("flute".endswith('t'))
+
+# 3.1.42
+print("Q42 is:")
+print(True and False)
+
+# 3.1.44
+print("Q44 is:")
+print(not False)
+
+# 3.1.46
+print("Q46 is:")
+print(not(a < b))
+print(a > b)
+print("Equivalent")
+
+# 3.1.48
+print("Q48 is:")
+print(not(a == b) or (a == c))
+print((a != b) or (a != c))
+print("Equivalent")
+
+# 3.1.50
+print("Q50 is:")
+print((a < b) and ((a > d) or (a > e)))
+print((a < b) and (a > d) or ((a < b) and (a > e)))
+

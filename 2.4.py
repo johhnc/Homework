@@ -253,7 +253,7 @@ print("Q92 is:")
 ships = ["Nina", "Pinta", "Santa Maria"]
 print(ships[-5:2])
 
-# 2.4.102 -- works but retains punctuation
+# 2.4.102
 print("Q102 is:")
 sentence = input("Enter a sentence: ")
 sentence2 = sentence.split()

@@ -49,6 +49,43 @@ print((a * a < b) or not(a * a < a))
 print("Q18 is:")
 print(not(a < b) or not (a < (b + a)) )
 
+# 3.1.20
+print("Q20 is:")
+print(((a == b) or not (b < a)) and ((a < b) or (b == a + 1)))
 
+# 3.1.22
+print("Q22 is:")
+print("Inspector" < "gadget")
 
+# 3.1.24
+print("Q24 is:")
+print('J' >= 'J')
+
+# 3.1.26
+print("Q26 is:")
+print('B' > '?')
+
+# 3.1.28
+print("Q28 is:")
+print("Duck" < "Duck" + "Duck")
+
+# 3.1.30
+print("Q30 is:")
+print("th" in "Python")
+
+# 3.1.32
+print("Q32 is:")
+print((7 <34) and ("7" < "34"))
+
+# 3.1.34
+print("Q34 is:")
+print(isinstance(32., int))
+
+# 3.1.36
+print("Q36 is:")
+print(isinstance(32, int))
+
+# 3.1.38
+print("Q38 is:")
+print("knight".startswith('n'))
 

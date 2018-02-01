@@ -165,9 +165,16 @@ L = name.split()
 print(L[0], L[2])
 
 # 2.4.64
+print("Q64 is:")
 list1 = ['h','o', 'n', 'P', 'y', 't']
 list2 = list1[3:] + list1[:3]
 print(("".join(list2)))
+
+# 2.4.66
+print("Q66 is:")
+list10 = ["is", "less", "more"]
+list10[0], list10[1] = list10[1], list10[0]
+print(" ".join(list10))
 
 # 2.4.68
 print("Q68 is:")

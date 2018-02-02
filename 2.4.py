@@ -270,9 +270,9 @@ print("Last word:", sentence2[-1])
 
 # 2.4.104
 print("104 is:")
-fullName = input("Enter a 3-part name: ")
-name = fullName.split()
-print("Middle Name: ", name[1])
+fName = input("Enter a 3-part name: ")
+nameO = fName.split()
+print("Middle Name: ", nameO[1])
 
 # Programing Project 2
 print("Programing Project 2 is:")

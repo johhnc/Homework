@@ -103,18 +103,55 @@ print(not False)
 
 # 3.1.46
 print("Q46 is:")
-print(not(a < b))
-print(a > b)
-print("Equivalent")
+#not(a < b) ; (a > b)
+print("Not Equivalent")
 
 # 3.1.48
 print("Q48 is:")
-print(not(a == b) or (a == c))
-print((a != b) or (a != c))
+#not(a == b) or (a == c) ; (a != b) or (a != c)
 print("Equivalent")
 
 # 3.1.50
 print("Q50 is:")
-print((a < b) and ((a > d) or (a > e)))
-print((a < b) and (a > d) or ((a < b) and (a > e)))
+#(a < b) and ((a > d) or (a > e)) ; (a < b) and (a > d) or ((a < b) and (a > e))
+print("Equivalent")
+
+# 3.1.52
+print("Q52 is:")
+# not(a >= b) ; (a <= b) and not(a == b)
+print("Equivalent")
+
+# 3.1.54
+print("Q54 is:")
+# str1.upper() == str1 ; str1.isupper()
+print("Equivalent")
+
+# 3.1.56
+print("Q56 is:")
+print("(a != b) ; (a != d)")
+
+# 3.1.58
+print("Q58 is:")
+print("(a == b) ; (a > b)")
+
+# 3.1.60
+print("Q60 is:")
+print(" (a == "") ; (a >= b) ; (len(a) >= 5) ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

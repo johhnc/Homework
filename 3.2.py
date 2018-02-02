@@ -86,3 +86,20 @@ else:
 print("The total cost for the bagels is ${0:,.2f}.".format(cost))
 
 # 3.2.28
+print("Q28 is:")
+pages = int(input("Enter the number of copies:  "))
+if pages < 100:
+    cost = 0.05
+else:
+    cost = 5 + 0.03 * (pages - 100)
+print("The total cost is ${0:,.2f}.".format(cost))
+
+# 3.2.30
+print("Q30 is:")
+payRate = float(input("Enter your hourly wage: "))
+hoursWorked = float(input("Enter number of hours you worked: "))
+if hoursWorked <= 40:
+    totalPay = payRate * hoursWorked
+else:
+    totalPay = (payRate * 40) + (1.5 * payRate * (hoursWorked - 40))
+print("Your pay for week is ${0:,.2f}.".format(totalPay))

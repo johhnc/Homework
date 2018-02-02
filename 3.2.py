@@ -79,9 +79,10 @@ if (feet > 141):
 # 3.2.26
 print("Q26 is:")
 item = float(input("Enter the number of bagels: "))
-cost1 = item * .75
-cost2 = item * .60
 if item < 6:
-    print("the cost is:", "$",round(cost1, 3))
-if item >6:
-    print("the cost is:", "$", round(cost2, 3))
+    cost = 0.75 * item
+else:
+    cost = .60 * item
+print("The total cost for the bagels is ${0:,.2f}.".format(cost))
+
+# 3.2.28

@@ -27,7 +27,7 @@ while i >= 0:
     if len(oceans[i]) < 7:
         del oceans[i]
     i = i - 1
-    print(", ".join(oceans))
+print(", ".join(oceans))
 
 # 3.3.8
 numTries = 0
@@ -51,18 +51,18 @@ restitution = float(input("Enter coefficient of restitution: "))
 height = float(input("Enter initial height in meters: "))
 # meters to centimeters
 height *= 100
-distance = 0
+traveled = 0
 # first bounce
 bounces = 1
-distance = height
+traveled = height
 while height * restitution >= 10:
     bounces += 1
-height = restitution * height
-distance += 2 * height
+    height = restitution * height
+    traveled += 2 * height
 # centimeters to meters
-distance /= 100
+traveled /= 100
 print("Number if bounces:", bounces)
-print("Meters traveled: {0:,.2f}".format(distance))
+print("Meters traveled: {0:,.2f}".format(traveled))
 
 # 3.3.18
 print("Q18 is:")

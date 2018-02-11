@@ -50,7 +50,7 @@ else:
 # 3.2.12
 print("Q12 is:")
 number = 5
-if number <0:
+if number < 0:
     print("Negative")
 else:
     if number == 0:
@@ -75,6 +75,7 @@ if (feet > 141):
         print("Good")
     else:
         print("Nope")
+print("The statue is 151 feet from base to torch")
 
 # 3.2.26
 print("Q26 is:")

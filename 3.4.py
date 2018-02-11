@@ -108,8 +108,27 @@ for leaf in leaves:
     number += 1
 
 # 3.4.38
+print("Q38 is:")
 dataList = []
 infile = open("Numbers.txt", 'r')
+for line in infile:
+    dataList.append(eval(line))
+infile.close()
+print(sum(dataList))
+
+# 3.4.40
+print("Q40 is:")
+infile = open("States.txt", 'r')
+for line in infile:
+    continue
+infile.close()
+print(line, end="")
+
+
+
+
+
+
 
 
 

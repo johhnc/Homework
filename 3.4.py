@@ -124,30 +124,28 @@ for line in infile:
 infile.close()
 print(line, end="")
 
+# 3.4.52
+print("Q52 is:")
+phone = input("Enter a telephone number: ")
+withDashes = ""
+for ch in phone:
+    if ch != '-':
+        withDashes += ch
+print("Number without dashes is", withDashes + '.')
 
+# 3.4.54
+print("Q54 is:")
+numberEntered = eval(input("Enter a number: "))
+for i in range(2):
+    num = eval(input("Enter a number: "))
+if num > numberEntered:
+    largest = num
+print("Largest number:", largest)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 3.4.56
+print("Q56 is:")
+sum = 0
+for i in range(1, 101):
+    sum += i
+print("The sum 1 + 2 + ... + 100")
+print("is", str(sum) + '.')

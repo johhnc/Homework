@@ -4,20 +4,19 @@
 # 02/12/18
 
 # 3.4.2
-print("Q2 is:")
-range(-11, -7)
+print("Q2 is:", range(-11, -7))
 
 # 3.4.4
-print("Q4 is:")
-range(2010, 2030, 5)
+print("Q4 is:", range(2010, 2030, 5))
+
 
 # 3.4.6
-print("Q6 is:")
-range(1)
+print("Q6 is:", range(1))
+
 
 # 3.4.8
-print("Q8 is:")
-range(12, 2, -5)
+print("Q8 is:", range(12, 2, -5))
+
 
 # 3.4.10
 print("Q10 is:")

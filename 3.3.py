@@ -6,7 +6,7 @@
 # 3.3.2
 print("Q2 is:")
 num = 3
-while num <15:
+while num < 15:
     num += 5
 print(num)
 
@@ -14,7 +14,7 @@ print(num)
 print("Q4 is:")
 total = 0
 num = 1
-while num <5:
+while num < 5:
     total += num
     num += 1
 print(total)

@@ -107,7 +107,9 @@ for leaf in leaves:
     print("Leaf", str(number) + ':', leaf)
     number += 1
 
-
+# 3.4.38
+dataList = []
+infile = open("Numbers.txt", 'r')
 
 
 

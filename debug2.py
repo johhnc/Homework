@@ -1,6 +1,7 @@
-print("Q56 is:")
-sum = 0
-for i in range(1, 101):
-    sum += i
-print("The sum 1 + 2 + ... + 100")
-print("is", str(sum) + '.')
+print("Q54 is:")
+largest = eval(input("Enter a number: "))
+for i in range(2):
+    num = eval(input("Enter a number: "))
+    if num > largest:
+        largest = num
+print("Largest number:", largest)

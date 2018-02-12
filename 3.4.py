@@ -122,7 +122,7 @@ infile = open("States.txt", 'r')
 for line in infile:
     continue
 infile.close()
-print(line, end="")
+print(line) #   had to remove the end="" from the print statement
 
 # 3.4.52
 print("Q52 is:")
@@ -135,11 +135,11 @@ print("Number without dashes is", withDashes + '.')
 
 # 3.4.54
 print("Q54 is:")
-numberEntered = eval(input("Enter a number: "))
+largest = eval(input("Enter a number: "))
 for i in range(2):
     num = eval(input("Enter a number: "))
-if num > numberEntered:
-    largest = num
+    if num > largest:
+        largest = num
 print("Largest number:", largest)
 
 # 3.4.56

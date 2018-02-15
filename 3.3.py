@@ -30,6 +30,8 @@ while i >= 0:
 print(", ".join(oceans))
 
 # 3.3.8
+print("Q8"
+      "")
 numTries = 0
 year = 0
 while (numTries < 7) and (year != 1964):

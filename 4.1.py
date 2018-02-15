@@ -40,3 +40,26 @@ def stateTax(income):
     else:
         return 450 + (.049 * (income - 15000))
 main()
+
+# 4.1.8
+print("Q8 is:")
+def main():
+    times("best")
+    times("worst")
+def times(word):
+    print("It was the", word, "of times.")
+main()
+
+# 4.1.10
+print("Q10 is")
+def main():
+    commonFates()
+    print("died")
+    commonFates()
+    print("survived")
+def commonFates():
+    print("divorced")
+    print("beheaded")
+main()
+
+

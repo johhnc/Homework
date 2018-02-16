@@ -160,3 +160,45 @@ def calculateNumberOfCaps(quotation):
             numberOfCaps += 1
         return numberOfCaps
 main()
+
+# 4.1.26
+print("Q26 is:")
+def howMany(st1, st2):
+    if st2 != "":
+        n = 0
+        i = 0
+    while i < len(st1):
+        if st1[i:].startswith(st2):
+            n += 1
+            i = i + len(st2)
+        else:
+            i += 1
+        return n
+    else:
+        return len(st1) + 1
+
+# 4.1.30
+print("Q30 is:")
+def main():
+    first = getFirstName()
+    last = getLastName()
+    salary = getCurrentSalary()
+    newSalary = calculateNewSalary(salary)
+    displayResult(first, last, newSalary)
+def getFirstName():
+    first = input("Enter first name: ")
+    return first
+def getLastName():
+    last = input("Enter last name: ")
+    return last
+def getCurrentSalary():
+    salary = float(input("Enter current salary: "))
+    return salary
+def calculateNewSalary(salary):
+    if salary < 40000:
+        return (salary * 1.05)
+    else:
+        return 2000 + salary + (.02 * (salary - 40000))
+def displayResult(first, last, newSalary):
+    print("New salary for {0} {1}: ${2:,.2f}".format(first, last, newSalary))
+main()

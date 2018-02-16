@@ -137,3 +137,26 @@ main()
 
 # 4.1.24
 print("Q24 is:")
+def main():
+    quotation = input("Enter a quotation:   ")
+    print("\nMENU")
+    print(" 1. Count number of vowels in the quotation. ")
+    print(" 2. count number of uppercase letters in the quotation.  ")
+    choice = int(input("Select 1 or 2 from the menu:  "))
+    if choice == 1:
+        print("Number of vowels:", calculateNumberOfVowels(quotation))
+    else:
+        print("Number of uppercase letters:", calculateNumberOfCaps(quotation))
+def calculateNumberOfVowels(quotation):
+    numberOfVowels = 0
+    for ch in quotation:
+        if ch.upper() in "AEIOU":
+            numberOfVowels += 1
+        return numberOfVowels
+def calculateNumberOfCaps(quotation):
+    numberOfCaps = 0
+    for ch in quotation:
+        if 'A' <= ch <= 'Z':
+            numberOfCaps += 1
+        return numberOfCaps
+main()

@@ -77,3 +77,63 @@ main()
 
 # 4.1.14
 print("Q14 is:")
+x = 7
+def main():
+    global x
+    x = 5
+    f()
+    print(x)
+def f():
+    print(x)
+main()
+
+# 4.1.16
+print("Q16 is:")
+word = "spam"
+def main():
+    f()
+    print(word)
+def f():
+    global word
+    word = word.upper()
+main()
+
+# 4.1.18
+print("Q18 is:")
+ESTATE_TAX_EXEMPTION = 1000000
+TAX_RATE = .45
+
+def main():
+    valueOfEstate = 3000000
+    tax = TAX_RATE * (valueOfEstate - ESTATE_TAX_EXEMPTION)
+    print("You owe ${0:,.2f} in estate taxes.".format(tax))
+main()
+
+# 4.1.20
+print("Q20 is:")
+def main():
+    word = "garb"
+    reverseWord(word)
+    print(word)
+def reverseWord(word):
+    list1 = list(word)
+    list1.reverse()
+    word = "".join(list1)
+    print(word)
+main()
+
+# 4.1.22
+print("Q22 is:")
+def main():
+    grades = [80, 75, 90, 100]
+    grades = dropLowest(grades)
+    average = sum(grades) / len(grades)
+    print(round(average))
+def dropLowest(grades):
+    lowestGrade = min(grades)
+    grades.remove(lowestGrade)
+    return grades
+main()
+
+# 4.1.24
+print("Q24 is:")

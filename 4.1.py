@@ -62,4 +62,18 @@ def commonFates():
     print("beheaded")
 main()
 
+# 4.1.12
+print("Q12 is:")
+def main():
+    listPres = getListOfPresidents()
+    num = int(input("enter a number from 1 through 44:  "))
+    print(listPres[num - 1], "was president number", num)
+def getListOfPresidents():
+    infile = open("USpres.txt", 'r')
+    listPres = [line.rstrip() for line in infile]
+    infile.close()
+    return listPres
+main()
 
+# 4.1.14
+print("Q14 is:")

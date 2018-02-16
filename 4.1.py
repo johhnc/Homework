@@ -202,3 +202,6 @@ def calculateNewSalary(salary):
 def displayResult(first, last, newSalary):
     print("New salary for {0} {1}: ${2:,.2f}".format(first, last, newSalary))
 main()
+
+# 4.1.32
+print("Q32 is:")

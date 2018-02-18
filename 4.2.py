@@ -6,7 +6,7 @@
 # 4.2.2
 print("Q2 is:")
 def main():
-    ## Good advice to follow
+    # Good advice to follow
     advice()
 def advice():
     print("Keep cool, but dont freeze.")
@@ -63,6 +63,21 @@ main()
 
 # 4.2.12
 print("Q12 is:")
+
+def main():
+    x, y = getTwoIntegers()
+    x, y = calculateSumAndProduct(x, y)
+    displaySumAndProduct(x, y)
+def getTwoIntegers():
+    a = int(input("Enter first integer: "))
+    b = int(input("Enter second integer:    "))
+    return a, b
+def calculateSumAndProduct(x, y):
+    return x + y, x * y
+def displaySumAndProduct(x, y):
+    print("Sum" + ':', x)
+    print("Product" + ':', y)
+main()
 
 
 

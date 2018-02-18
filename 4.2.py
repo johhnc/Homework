@@ -32,3 +32,61 @@ def passedExam(grade):
         return False
 main()
 
+# 4.2.6
+print("Q6 is:")
+def main():
+    n, yob = getNameAndYOB()
+    print(n, "will be", 2020- yob, "years old in 2020.")
+def getNameAndYOB():
+    name = input("Enter a name: ")
+    yearOfBirth = int(input("Enter a year of birth: "))
+    return name, yearOfBirth
+main()
+
+# 4.2.8
+print("Q8 is:")
+list1 = ["pear", "Banana", "apple"]
+list1.sort()
+print(list1)
+list1.sort(key=lambda x: x.upper())
+print(list1)
+
+# 4.2.10
+print("Q10 is:")
+def main():
+    for i in range(3):
+        print(func())
+def func(x=[]):
+    x.append("wink")
+    return x
+main()
+
+# 4.2.12
+print("Q12 is:")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

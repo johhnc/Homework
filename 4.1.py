@@ -207,7 +207,6 @@ main()
 print("Q32 is:")
 months = []
 def main():
-## display months containing the letter r.
     global months
     fillList()
     months = deleteNoRs()

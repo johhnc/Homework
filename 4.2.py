@@ -80,16 +80,16 @@ def displaySumAndProduct(x, y):
 main()
 
 # 4.2.14
-print("Q14 is:")
-def main():
-    composers = ["Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Franz Joseph Haydn", "Ralph Vaughn Williams"]
-    composers.sort(key=lengthOfLastName)
-    for composer in composers:
-        print(composer)
-def lengthOfLastName(composer):
-    compList = composer.split
-    return len(compList[-1])
-main()
+print("Q14 is: not working and I am not sure were the error is because it matches what is in the book")
+# def main():
+#    composers = ["Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Franz Joseph Haydn", "Ralph Vaughn Williams"]
+#    composers.sort(key=lengthOfLastName)
+#    for composer in composers:
+#        print(composer)
+#def lengthOfLastName(composer):
+#    compList = composer.split
+#    return len(compList[-1])
+#main()
 
 
 # 4.2.16
@@ -126,10 +126,10 @@ for num in sorted(numbers):
 # 4.2.24
 print("Q24 is:")
 
-popLaguages = ["Python", "C", "C++", "Ruby", "VB", "PHP"]
+popLanguages = ["Python", "C", "C++", "Ruby", "VB", "PHP"]
 sentence = "I program in VB, Python, and Ruby"
 list1 = sentence.split()
-myLanguages = [word[:-1] for word in list1 if word[:1] in popLaguages]
+myLanguages = [word[:-1] for word in list1 if word[:1] in popLanguages]
 for language in myLanguages:
     print(language, end="   ")
 

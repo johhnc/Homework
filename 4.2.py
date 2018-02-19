@@ -79,9 +79,59 @@ def displaySumAndProduct(x, y):
     print("Product" + ':', y)
 main()
 
+# 4.2.14
+print("Q14 is:")
+def main():
+    composers = ["Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Franz Joseph Haydn", "Ralph Vaughn Williams"]
+    composers.sort(key=lengthOfLastName)
+    for composer in composers:
+        print(composer)
+def lengthOfLastName(composer):
+    compList = composer.split
+    return len(compList[-1])
+main()
 
 
+# 4.2.16
+print("Q16 is:")
 
+def main():
+    list1 = ["e", "pluribus", "unum"]
+    list2 = sorted(list1, key=numberOfVowels)
+    print(list2)
+def numberOfVowels(word):
+    return len([ch for ch in word if (ch in "aeiou")])
+main()
+
+# 4.2.18
+print("Q18 is:")
+
+popularLaguages = ["Python", "C", "C++", "Ruby", "VB", "PHP"]
+for item in sorted(popularLaguages):
+    print(item, end="   ")
+
+# 4.2.20
+print("Q20 is:")
+popularLaguages = ["Python", "C", "C++", "Ruby", "VB", "PHP"]
+for item in sorted(popularLaguages, key=len):
+    print(item, end=" ")
+
+# 4.2.22
+print("Q22 is:")
+
+numbers = [4, 6, -2, -3, 5]
+for num in sorted(numbers):
+    print(num, end="  ")
+
+# 4.2.24
+print("Q24 is:")
+
+popLaguages = ["Python", "C", "C++", "Ruby", "VB", "PHP"]
+sentence = "I program in VB, Python, and Ruby"
+list1 = sentence.split()
+myLanguages = [word[:-1] for word in list1 if word[:1] in popLaguages]
+for language in myLanguages:
+    print(language, end="   ")
 
 
 

@@ -134,10 +134,78 @@ for language in myLanguages:
     print(language, end="   ")
 
 
+# 4.2.50
+print("Q50 is:")
+def main():
+    grade = getAverageGrade()
+    semGrade = calculateLetterGrade(grade)
+    print("Semester grade:", semGrade)
+def getAverageGrade():
+    midGrade = int(input("Enter grade on midterm exam: "))
+    finalGrade = int(input("Enter grade on final exam: "))
+    return ceil((midGrade + 2 * finalGrade) / 3)
+def ceil(x):
+    if int(x) != x:
+        return int(x + 1)
+    else:
+        return x
+def calculateLetterGrade(grade):
+    if grade >= 90:
+        return "A"
+    elif grade >= 80:
+        return "B"
+    elif grade >= 70:
+        return "C"
+    elif grade >= 60:
+        return "D"
+    else:
+        return "F"
+main()
 
+# 4.2.52
+print("Q52 is:")
+def main():
+    grades = []
+    for i in range(1, 6):
+        grade = eval(input("Enter grade " + str(i) + ": "))
+        grades.append(grade)
+    grades.sort()
+    grades = grades[2:]
+    (rng, ave) = analyzeGrades(grades)
+    print("Range:", rng)
+    print("Average:", ave)
+def analyzeGrades(grades):
+    rng = grades[-1] - grades[0]
+    ave = sum(grades) / len(grades)
+    return (rng, ave)
+main()
 
+# 4.2.54
 
+print("Q54 is:")
+def main():
+    newEngland = [("Maine", 30840, 1.329), ("Vermont", 9217, .626), ("New Hampshire", 8953, 1.321),
+          ("Massachusetts", 7800, 6.646), ("Connecticut", 4842, 3.59), ("Rhode Island", 1044, 1.05)]
+    newEngland.sort(key=sortByPop, reverse=True)
+    print("Sorted by population in descending order:")
+    for state in newEngland:
+        print(state[0], " ", end="")
+def sortByPop(state):
+    return state[2]
+main()
 
+# 4.2.56
+print("Q56 is:")
+def main():
+    newEngland = [("Maine", 30840, 1.329), ("Vermont", 9217, .626), ("New Hampshire", 8953, 1.321),
+          ("Massachusetts", 7800, 6.646), ("Connecticut", 4842, 3.59), ("Rhode Island", 1044, 1.05)]
+    newEngland.sort(key=sortBySizeOfName)
+    print("Sorted by length of name in ascending order:")
+    for state in newEngland:
+        print(state[0], " ", end="")
+def sortBySizeOfName(state):
+    return len(state[0])
+main()
 
 
 

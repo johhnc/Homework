@@ -60,3 +60,50 @@ print("File already exists. is printed")
 
 # 5.1.34
 print("Q34 is:")
+def main():
+    number = getNumbers("Numbers.txt")
+    print("The file Numbers.txt contains", number, "numbers.")
+
+def getNumbers(filename):
+    infile = open("Numbers.txt", 'r')
+    number = 0
+    for line in infile:
+        number += 1
+    infile.close()
+    return number
+main()
+
+# 5.1.36
+print("Q36 is:")
+def main():
+    small = getSmall("Numbers.txt")
+    print("The smallest number in the file Numbers.txt is",
+    str(small) + ".")
+
+def getSmall(fileName):
+    infile = open("Numbers.txt", 'r')
+    min = int(infile.readline())
+    for line in infile:
+        num = int(line)
+    if num < min:
+        small = num
+    infile.close()
+    return min
+main()
+
+# 5.1.38
+print("Q38 is:")
+def main():
+    ave = getAve("Numbers.txt")
+    print("The average of the numbers in \nthe file Numbers.txt is {0:,.1f}.".format(ave))
+
+def getAve(fileName):
+    infile = open("Numbers.txt", 'r')
+    sum = 0
+    quantity = 0
+    for line in infile:
+        sum += int(line)
+        quantity += 1
+    infile.close()
+    return sum / quantity
+main()

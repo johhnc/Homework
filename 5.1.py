@@ -17,4 +17,11 @@ print(text)
 # 5.1.4
 print("Q4 is:")
 list1 = ["Hello", "Aloha\n"]
+outfile.open("Greetings.txt", 'a')
+outfile.writelines(list1)
+outfile.close()
+infile.open("Greetings.txt", 'r')
+text = infile.read().rstrip()
+infile.close()
+print(text)
 

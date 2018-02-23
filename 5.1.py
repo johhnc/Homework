@@ -107,3 +107,18 @@ def getAve(fileName):
     infile.close()
     return sum / quantity
 main()
+
+# 5.1.40
+print("Q40 is:")
+import os
+def main():
+    infile = open("SomeMonths.txt", 'r')
+    outfile = open("Temp.txt", 'w')
+    for month in infile:
+        if 'r' not in month.lower():
+            outfile.write(month)
+    infile.close()
+    outfile.close()
+    os.remove("SomeMonths.txt")
+    os.rename("Temp.txt", "SomeMonths.txt")
+main()

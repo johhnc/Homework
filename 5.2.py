@@ -93,6 +93,7 @@ for justice in supremeCourt:
     print(justice.split(',')[0], justice.split(',')[1])
 
 # 5.1.14
+# its fucking DICKERED!!!! line 102 is tosing an error right now
 print("Q14 is:")
 def main():
     stateInput = input("Enter a state abbreviation: ")

@@ -1,0 +1,11 @@
+Albania,b
+Andorra,d
+Azerbaijan,e
+Afghanistan,g
+Algeria,g
+Angola,g
+Argentina,g
+Armenia,m
+Australia,s
+Austria,s
+Antigua and Barbuda,t

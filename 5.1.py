@@ -1,7 +1,7 @@
 # John Crosbie
 # CIS 122
 # Ch 5.1
-# 02/19/18
+# 02/26/18
 
 # 5.1.2
 print("Q2 is:")

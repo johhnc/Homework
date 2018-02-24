@@ -109,7 +109,7 @@ def getAve(fileName):
 main()
 
 # 5.1.40
-print("Q40 is:")
+print("Q40 is: See Code")
 import os
 def main():
     infile = open("SomeMonths.txt", 'r')
@@ -121,4 +121,27 @@ def main():
     outfile.close()
     os.remove("SomeMonths.txt")
     os.rename("Temp.txt", "SomeMonths.txt")
+
 main()
+
+# 5.1.42
+print("Q42 is: see code")
+import os
+def main():
+    infile = open("SomeStates.txt", 'r')
+    outfile = open("Temp.txt", 'w')
+    for state in infile:
+        if state[:1] not in "AEIOU":
+            outfile.write(state)
+    infile.close()
+    outfile.close()
+    os.remove("SomeStates.txt")
+    os.rename("Temp.txt", "SomeStates.txt")
+main()
+
+# 5.1.44
+infile = open("PresStates.txt", 'r')
+statesSet = {state.rstrip() for state in infile}
+infile.close()
+print(len(statesSet), "different states have")
+print("produced presidents of the \nUnited States.")

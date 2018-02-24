@@ -57,3 +57,41 @@ def byPercentGrowth(stock):
     percentIncrease = (float(stock[5]) - float(stock[4])) / float(stock[4])
     return percentIncrease
 main()
+
+# 5.2.10
+print("Q10 is:")
+def main():
+    stocks = dataIntoList("DOW.txt")
+    stocks.sort(key=endOfYearPrice)
+    display(stocks)
+def dataIntoList(fileName):
+    infile = open(fileName, 'r')
+    lines = [line.rstrip() for line in infile]
+    infile.close()
+    for i in range(len(lines)):
+        lines[i] = lines[i].split(',')
+        lines[i][4] = eval(lines[i][4])
+        lines[i][5] = eval(lines[i][5])
+        lines[i][6] = eval(lines[i][6])
+        lines[i][7] = eval(lines[i][7])
+    return lines
+def endOfYearPrice(stock):
+    return stock[5]
+def display(stockList):
+    print("{0:20} {1:8} {2:s}".format("Company", "Symbol", "Price on 12/31/2013"))
+    for i in range(5):
+        print("{0:20} {1:8} ${2:0.2f}".format(stockList[i][0], stockList[i][1], stockList[i][5]))
+main()
+
+# 5.2.12
+print("Q12 is:")
+infile = open("Justices.txt", 'r')
+supremeCourt = [line for line in infile if (int(line.split(',')[5]) == 0)]
+supremeCourt.sort(key=lambda x: int(x.split(',')[4]))
+print("Current Justices")
+for justice in supremeCourt:
+    print(justice.split(',')[0], justice.split(',')[1])
+
+# 5.1.14
+print("Q14 is:")
+

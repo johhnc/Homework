@@ -17,6 +17,6 @@ def getJusticesByState(state):
         return records
 def fixCurrentJudges(judges):
     for judge in judges:
-        if judge[5] == 0:
-            judge[5] = 2015
+        if judge[2] == 0:
+            judge[2] = 2015
 main()

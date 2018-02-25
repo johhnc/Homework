@@ -95,26 +95,32 @@ for justice in supremeCourt:
 # 5.1.14
 # its fucking DICKERED!!!! line 102 is tosing an error right now
 print("Q14 is:")
+
+
 def main():
-    stateInput = input("Enter a state abbreviation: ")
-    justices = getJusticesByState(stateInput)
-    fixCurrentJustices(justices)
-    justices.sort(key=lambda justice: justice[5] - justice[4], reverse=True)
-    print("\n{0:18} {1:20} {2}".format("Justice", "Appointing Pres", "Yrs Served"))
-    for justice in justices:
-        print("{0:18} {1:20} {2}".format(justice[0] + " " + justice[1],
-                                         justice[2].split(" ")[-1], justice[5] - justice[4]))
-def getJusticesByState(stateInput):
+    state = input("Enter a state abbreviation: ")
+    justices = getJusticesByState(state)
+    fix(justices)
+    justices.sort(key=lambda justice1: str[5] - str[4], reverse=True)
+    print("\n{0:18} {1:20}  {2}".format("Justice", "Appointing Pres", "Yrs Served"))
+    for justice2 in justices:
+        print("{0:18} {1:20}  {2}".format(justice2[0] + " " + justice2[1], justice2[2].split(" ")[-1],
+                                          justice2[5] - justice2[4]))
+
+
+def getJusticesByState(state):
     infile = open("Justices.txt", 'r')
-    listOfRecords = [line for line in infile if line.split(',')[3] == stateInput]
+    records = [line for line in infile if line.split(',')[3] == state]
     infile.close()
-    for i in range(len(listOfRecords)):
-        listOfRecords[i] = listOfRecords[i].split(',')
-        listOfRecords[i][4] = int(listOfRecords[i][4])
-        listOfRecords[i][5] = int(listOfRecords[i][5])
-        return listOfRecords
-def fixCurrentJustices(justices):
+    for i in range(len(records)): records[i] = records[i].split(',')
+    records[i][4] = int(records[i][4])
+    records[i][5] = int(records[i][5])
+    return records
+
+
+def fix(justices):
     for justice in justices:
         if justice[5] == 0:
             justice[5] = 2015
 main()
+

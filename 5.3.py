@@ -35,11 +35,12 @@ print("Q14 is:")
 NE.clear()
 print(NE)
 
+NE = {"CT":3.6, "ME":1.3, "MA":6.5, "NH":1.5, "RI":1.1, "VT":0.6}
+
 # 5.3.16
-# FUCKING DICKERED NOTHING RETURNS
 print("Q16 is:")
 for x in sorted(NE):
-    print(x + " ", end="")
+    print(x + " " )
 
 # 5.3.18
 print("Q18 is:")
@@ -49,9 +50,81 @@ for x in NE:
 print("{0:.1f}".format(total))
 
 # 5.3.20
-# FUCKING DICKERED!!!! KEY ERROR 'VT'
-# print("Q20 is:")
-# newEngland = dict(NE)
-# del newEngland["VT"]
-# print(len(NE))
+print("Q20 is:")
+newEngland = dict(NE)
+del newEngland["VT"]
+print(len(NE))
+
+# dictionary for 21-44
+homeRunKings = {"Bonds":762, "Aaron":755}
+# 5.3.22
+print("Q22 is:")
+print(homeRunKings["Aaron"])
+
+# 5.3.24
+print("Q24 is:")
+print(list(homeRunKings.items()))
+
+# 5.3.26
+print("Q26 is:")
+print(max(homeRunKings))
+
+# 5.3.28
+print("Q28 is:")
+print("Aaron" not in homeRunKings)
+
+# 5.3.30
+print("Q30 is:")
+print(list(homeRunKings.keys()))
+
+# 5.3.32
+print("Q32 is:")
+print(homeRunKings.get("Ruth", "NA"))
+
+# 5.3.34
+print("Q34 is:")
+homeRunKings["Ruth"] = 714
+print(homeRunKings)
+
+# 5.3.36
+print("Q36 is:")
+homeRunKings["Bonds"] += 1
+print(homeRunKings)
+
+# 5.3.38
+print("Q38 is:")
+for x in homeRunKings.keys():
+    print(x)
+
+# 5.3.40
+print("Q40 is:")
+for x in sorted(homeRunKings):
+    print(x)
+
+# 5.3.42
+print("Q42 is:")
+dupHKRs = homeRunKings
+dupHKRs["Bonds"] = 750
+print(homeRunKings["Bonds"])
+
+# 5.3.44
+print("Q44 is:")
+newHRKs = {}
+newHRKs.update(homeRunKings)
+print(newHRKs["Aaron"])
+
+# 5.3.52
+print("Q52 is:")
+
+
+# 5.3.54
+print("Q54 is:")
+
+
+# 5.3.56
+print("Q56 is:")
+
+
+# 5.3.58
+print("Q58 is:")
 

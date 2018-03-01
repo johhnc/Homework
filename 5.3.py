@@ -115,16 +115,92 @@ print(newHRKs["Aaron"])
 
 # 5.3.52
 print("Q52 is:")
-
+import pickle
+def main():
+    judgesDict = createDictFromFile("JusticesDict.dat")
+    displayJudgesState(judgesDict)
+def createDictFromFile(fileName):
+    infile = open(fileName, 'rb')
+    dictionaryName = pickle.load(infile)
+    infile.close()
+    return dictionaryName
+def displayJudgesState(dictName):
+    state = input("Enter a state abbreviation: ")
+    for x in dictName:
+        if dictName[x]["state"] == state:
+            print(" {0:19}{1}".format(x, str(dictName[x]["yrAppt"])))
+main()
 
 # 5.3.54
 print("Q54 is:")
-
+import pickle
+def main():
+    judgeDict = createFromFile("JusticesDict.dat")
+    displayStatesWithJudges(judgeDict)
+def createFromFile(fileName):
+    infile = open(fileName, 'rb')
+    name = pickle.load(infile)
+    infile.close()
+    return name
+def displayStatesWithJudges(dictionaryName):
+    states = {}
+    for justice in dictionaryName:
+        states[(dictionaryName[justice]["state"])] = 0
+    print(len(states), "states have produced justices.")
+    for justice in dictionaryName:
+        states[(dictionaryName[justice]["state"])] += 1
+    for state in sorted(states):
+        print(" " + state + ': ' + str(states[state]))
+main()
 
 # 5.3.56
 print("Q56 is:")
-
+def main():
+    roseBowlDict = createDictFromTextFile("Rosebowl.txt")
+    displayTopTen(roseBowlDict)
+def createDictFromTextFile(fileName):
+    infile = open(fileName, 'r')
+    roseBowlList = [line.rstrip() for line in infile]
+    infile.close()
+    aSet = set(roseBowlList)
+    infile.close()
+    roseBowlDict = {}
+    for x in aSet:
+        roseBowlDict[x] = 0
+    for x in roseBowlList:
+            roseBowlDict[x] += 1
+    return roseBowlDict
+def displayTopTen(dictionaryName):
+    dictionaryList = list(dictionaryName.items())
+    dictionaryList.sort(key=f, reverse=True)
+    print("Teams with four or more")
+    print("Rose Bowl wins as of 2014.")
+    for x in dictionaryList:
+        if x[1] > 3:
+            print(" " + x[0] + ':', x[1])
+def f(k):
+    return k[1]
+main()
 
 # 5.3.58
 print("Q58 is:")
-
+import pickle
+def main():
+    presDict = createDictFromFile("USpresStatesDict.dat")
+    firstName = input("Enter a first name: ")
+    displayOutput(presDict, firstName)
+def createDictFromFile(fileName):
+    infile = open(fileName, 'rb')
+    dictName = pickle.load(infile)
+    infile.close()
+    return dictName
+def displayOutput(dictName, name):
+    flag = False
+    for k in dictName:
+        x = k[1].split()
+        if x[0] == name:
+            print(" ", k[1], k[0])
+            flag = True
+    if not flag:
+            print("There are no presidents with the first name", name + '.')
+main()

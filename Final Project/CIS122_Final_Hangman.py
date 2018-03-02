@@ -9,6 +9,8 @@
 getQuestionNumber = int(input("Enter a number between 1 and 5:  "))
 
 
+
+
 # Create a method that accepts the word the
 # user guessed, as well as the correct answer
 # and compares the two. If they match, return a
@@ -30,8 +32,6 @@ correctMessage =
 # Input: string, string
 # Returns: bool
 
-isCorrect =
-
 # Create a method that accepts a string as a message
 # and asks the user a question with that message (input).
 # Then return the user's response as the return value 
@@ -39,8 +39,6 @@ isCorrect =
 # Name: tryAnswer
 # Input: string
 # Returns: string
-
-tryAnswer =
 
 # Create a method that accepts the correct answer
 # Return a string that tells the user that the
@@ -50,8 +48,6 @@ tryAnswer =
 # Name: gameOver
 # Input: string
 # Returns: string
-
-gameOver = 
 
 def main():
     # Create a dictionary of dictionaries that contain the
@@ -74,7 +70,6 @@ def main():
     # Begin a while loop that the rest of the game will live inside
     # The while loop should be a terminal loop that will be ended
     # with a break statement later if the user enters a value of "-1"
-    while keepGoing:
 
         # Using a try/except block, ask the user for a number
         # and convert the result to an integer. Be sure to use
@@ -82,26 +77,15 @@ def main():
         # If the user's answer cannot be converted to an integer
         # make sure the exception block ends with a continue statement
         # so that the user is asked the question again
-        try:
-            getQuestionNumber = int(getQuestionNumber(introMessage))
-        except:
-            continue
-
 
         # If the user entered "-1" as the question number
         # tell the user "Goodbye", and set the variable called 
         # keepGoing to False. Also make sure the block ends
         # with a break statement so the while loop terminates
-        if questionNumber == int("-1"):
-            print("Goodbye!")
-            keepGoing = False
-            break
 
         # If the question number is not a value between
         # 1 and 5, return to the top of the loop with a
         # continue statement so the question is asked again
-        if questionNumber not in range(1,6):
-            continue
 
         # Set a variable that creates a string message showing the clue
         # and ends with "What is it?"
@@ -114,7 +98,6 @@ def main():
         # Tell the user the clue, and ask them for the correct answer
         # Be sure to use the tryAnswer method for this, and to pass
         # in the right argument (the variable questionMessage)
-        userGuess = tryAnswer(questionMessage + "\n")
 
         # If the user entered the correct word, congratulate them
         # and tell them what they entered and what the correct word was.
@@ -127,17 +110,13 @@ def main():
         # You must tell them that they are either on the first letter,
         # the last letter or another letter in the middle when you
         # present the letters.
-        if isCorrect(userGuess, questionAnswer):
-            print(correctMessage(userGuess, questionAnswer))
-        else:
-            print("that was incorrect!")
 
             # Create a counter variable to know the current
             # position you are at in the answer word
-            index = 0
+
             # Begin a for loop to loop through the answer word that
             # was answered incorrectly
-            for i in questionAnswer:
+
                 # If this is the first letter, tell them so,
                 # and what the letter is
                 # Increment the counter
@@ -147,24 +126,12 @@ def main():
                 # is correct. If the new answer is correct
                 # tell them so using the correctMessage method
                 # and break from the for loop
-                if index == 0:
-                    print("The first letter is:", i)
-                    index += 1
-                    userGuess = tryAnswer("Try Again!\n")
-                    if isCorrect(userGuess, questionAnswer):
-                        print(correctMessage(userGuess, questionAnswer))
-                        break
-
 
                 # If this is the last letter, tell them so,
                 # and what the letter is
                 # Increment the counter
                 # Tell them what the last letter was and 
                 # tell them, using the gameOver method, to play again
-
-                elif index == len(questionAnswer) - 1:
-                    print("the last letter was", i)
-                print(gameOver(questionAnswer))
  
                 # If this is a letter other than the first or last letter,
                 # tell them so, and what the letter is
@@ -175,12 +142,6 @@ def main():
                 # is correct. If the new answer is correct
                 # tell them so using the correctMessage method
                 # and break from the for loop
-                else:
-                    print("The next letter is", i)
-                    index += 1
-                    if isCorrect(userGuess, questionAnswer):
-                        break
-
 
             #end for
     #end while

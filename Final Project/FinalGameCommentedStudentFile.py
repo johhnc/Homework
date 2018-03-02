@@ -6,7 +6,8 @@
 # Input: string
 # Returns: string
 
-getQuestionNumber = int(input("Enter a number between 1 and 5:  "))
+def getQuestionNumber(introMessage):
+    return input(introMessage + "\n")
 
 
 # Create a method that accepts the word the
@@ -20,7 +21,8 @@ getQuestionNumber = int(input("Enter a number between 1 and 5:  "))
 # Input: string, string
 # Returns: string
 
-correctMessage =
+def correctMessage(userGuess, questionAnswer):
+    return "Congratulations! You entered" + userGuess + "and the answer is" + questionAnswer + "1\n"
 
 # Create a method that accepts the word the
 # user guessed, as well as the correct answer
@@ -30,7 +32,10 @@ correctMessage =
 # Input: string, string
 # Returns: bool
 
-isCorrect =
+def isCorrect(userGuess, questionAnswer):
+    if userGuess.lower() == questionAnswer.lower():
+        return True
+    return False
 
 # Create a method that accepts a string as a message
 # and asks the user a question with that message (input).
@@ -51,7 +56,7 @@ tryAnswer =
 # Input: string
 # Returns: string
 
-gameOver = 
+gameOver =
 
 def main():
     # Create a dictionary of dictionaries that contain the
@@ -67,7 +72,7 @@ def main():
 
     # Create a string variable that holds the following message:
     # "Enter as question number from 1 to 5, and you will play that clue. Enter -1 to quit "
-
+    int(input("Enter a number between 1 and 5:  "))
     # Create a bool variable to tell the game whether to keep
     # looping, or to quit the game. Initialize the variable to True
 
@@ -179,10 +184,6 @@ def main():
                     print("The next letter is", i)
                     index += 1
                     if isCorrect(userGuess, questionAnswer):
-                        break
-
-
-            #end for
-    #end while
+                    break
                         
 main()

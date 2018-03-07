@@ -189,6 +189,7 @@ def main():
                     print("The next letter is", i)
                     index += 1
                     if isCorrect(userGuess, questionAnswer):
-                    break
+                        break
+
                         
 main()

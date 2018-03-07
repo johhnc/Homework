@@ -45,7 +45,8 @@ def isCorrect(userGuess, questionAnswer):
 # Input: string
 # Returns: string
 
-tryAnswer =
+def tryAnswer(userGuess, questionAnswer):
+
 
 # Create a method that accepts the correct answer
 # Return a string that tells the user that the
@@ -56,7 +57,9 @@ tryAnswer =
 # Input: string
 # Returns: string
 
-gameOver =
+def gameOver(userGuess, questionAnswer):
+
+
 
 def main():
     # Create a dictionary of dictionaries that contain the
@@ -72,6 +75,7 @@ def main():
 
     # Create a string variable that holds the following message:
     # "Enter as question number from 1 to 5, and you will play that clue. Enter -1 to quit "
+    introMessage = "Enter as question number from 1 to 5, and you will play that clue. Enter -1 to quit"
     int(input("Enter a number between 1 and 5:  "))
     # Create a bool variable to tell the game whether to keep
     # looping, or to quit the game. Initialize the variable to True
@@ -79,6 +83,7 @@ def main():
     # Begin a while loop that the rest of the game will live inside
     # The while loop should be a terminal loop that will be ended
     # with a break statement later if the user enters a value of "-1"
+    keepGoing = True
     while keepGoing:
 
         # Using a try/except block, ask the user for a number
@@ -88,7 +93,7 @@ def main():
         # make sure the exception block ends with a continue statement
         # so that the user is asked the question again
         try:
-            getQuestionNumber = int(getQuestionNumber(introMessage))
+            questionNumber = int(getQuestionNumber(introMessage))
         except:
             continue
 

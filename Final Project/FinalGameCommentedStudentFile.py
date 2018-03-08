@@ -193,7 +193,8 @@ def main():
                 # and break from the for loop
                 else:
                 print("The next letter is", i)
-                    index += 1
-                    if isCorrect(userGuess, questionAnswer):
-                        break
+                index += 1
+                if isCorrect(userGuess, questionAnswer):
+                    print(correctMessage(userGuess, questionAnswer))
+                    break
 main()

@@ -1,14 +1,19 @@
 def getQuestionNumber(introMessage):
     return input(introMessage + "\n")
+
 def correctMessage(userGuess, questionAnswer):
     return "Congratulations! You entered" + userGuess + "and the answer is" + questionAnswer + "1\n"
+
 def isCorrect(userGuess, questionAnswer):
     if userGuess.lower() == questionAnswer.lower():
         return True
     return False
-def tryAnswer(userGuess, questionAnswer):
 
-def gameOver(userGuess, questionAnswer):
+def tryAnswer(message):
+    return input(message)
+
+def gameOver(questionAnswer):
+    return "Sorry! the word was", questionAnswer, ".", "Play Again!\n"
 
 def main():
     cluesDictionary = {1: {"whale": "This is the largest mammal type"},
@@ -46,12 +51,12 @@ def main():
                 if isCorrect(userGuess, questionAnswer):
                     print(correctMessage(userGuess, questionAnswer))
                     break
-                 elif index == len(questionAnswer) - 1:
+            elif index == len(questionAnswer) - 1:
                     print("the last letter was", i)
                     print(gameOver(questionAnswer))
-                else:
-                    print("The next letter is", i)
-                    index += 1
-                    if isCorrect(userGuess, questionAnswer):
-                        break
+            else:
+                print("The next letter is", i)
+                index += 1
+                if isCorrect(userGuess, questionAnswer):
+                    break
 main()

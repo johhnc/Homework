@@ -1,3 +1,9 @@
+cluesDictionary = {1: {"whale": "This is the largest mammal type"},
+                       2: {"eagle": "This is the US national bird"},
+                       3: {"football": "This popular sport is played with helmets and pads"},
+                       4: {"hawaii": "This state is a collection of islands"},
+                       5: {"moon": "This satellite helps control the tides"}}
+
 # Create a method that accepts a string as a message
 # and asks the user a question with that message (input).
 # Then return the user's response as the return value 
@@ -45,8 +51,8 @@ def isCorrect(userGuess, questionAnswer):
 # Input: string
 # Returns: string
 
-def tryAnswer(userGuess, questionAnswer):
-
+def tryAnswer(message):
+    return input(message)
 
 # Create a method that accepts the correct answer
 # Return a string that tells the user that the
@@ -57,8 +63,8 @@ def tryAnswer(userGuess, questionAnswer):
 # Input: string
 # Returns: string
 
-def gameOver(userGuess, questionAnswer):
-
+def gameOver(questionAnswer):
+    return "Sorry! the word was", + questionAnswer + ".", "Play Again!\n"
 
 
 def main():
@@ -186,10 +192,8 @@ def main():
                 # tell them so using the correctMessage method
                 # and break from the for loop
                 else:
-                    print("The next letter is", i)
+                print("The next letter is", i)
                     index += 1
                     if isCorrect(userGuess, questionAnswer):
                         break
-
-                        
 main()

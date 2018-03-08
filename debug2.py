@@ -1,22 +1,56 @@
-def main():
-    state = input("Enter a state abbreviation: ")
-    judges = getJusticesByState(state)
-    fixCurrentJudges(judges)
-    judges.sort(key=lambda judge: judge[5] - judge[4], reverse=True)
-    print("\n{0:18} {1:20} {2}".format("Justice", "Appointing Pres", "Yrs Served"))
-    for judge in judges:
-        print("{0:18} {1:20} {2}".format(judge[0] + " " + judge[1], judge[2].split(" ")[-1], judge[5] - judge[4]))
-def getJusticesByState(state):
-    infile = open("Justices.txt", 'r')
-    records = [line.rstrip() for line in infile if line.split(',')[3] == state]
-    infile.close()
-    for i in range(len(records)):
-        records[i] = records[i].split(',')
-        records[i][4] = int(records[i][4])
-        records[i][5] = int(records[i][5])
-        return records
-def fixCurrentJudges(judges):
-    for judge in judges:
-        if judge[2] == 0:
-            judge[2] = 2015
-main()
+cluesDictionary = {1: {"whale": "This is the largest mammal type"},
+                       2: {"eagle": "This is the US national bird"},
+                       3: {"football": "This popular sport is played with helmets and pads"},
+                       4: {"hawaii": "This state is a collection of islands"},
+                       5: {"moon": "This satellite helps control the tides"}}
+
+# Create a method that accepts a string as a message
+# and asks the user a question with that message (input).
+# Then return the user's response as the return value
+# of the method
+# Name: getQuestionNumber
+# Input: string
+# Returns: string
+
+def getQuestionNumber(introMessage):
+    return input(introMessage + "\n")
+
+
+# Create a method that accepts the word the
+# user guessed, as well as the correct answer
+# and compares the two. If they match, return a
+# string that tells the user that they guesses correctly,
+# and tells them the guess and the correct answer.
+# Make sure the word they submitted as a guess appears
+# to them wrapped in double quotes
+# Name: correctMessage
+# Input: string, string
+# Returns: string
+
+def correctMessage(userGuess, questionAnswer):
+    return "Congratulations! You entered" + userGuess + "and the answer is" + questionAnswer + "1\n"
+
+# Create a method that accepts the word the
+# user guessed, as well as the correct answer
+# and compares the two as lowercase strings.
+# If they match, return True, otherwise return fFalse
+# Name: isCorrect
+# Input: string, string
+# Returns: bool
+
+def isCorrect(userGuess, questionAnswer):
+    if userGuess.lower() == questionAnswer.lower():
+        return True
+    return False
+
+# Create a method that accepts a string as a message
+# and asks the user a question with that message (input).
+# Then return the user's response as the return value
+# of the method
+# Name: tryAnswer
+# Input: string
+# Returns: string
+
+def tryAnswer(userGuess, questionAnswer):
+    list(cluesDictionary[1].value())[0]
+    print(tryAnswer)

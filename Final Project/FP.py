@@ -17,7 +17,7 @@ def tryAnswer(message):
 
 
 def gameOver(questionAnswer):
-    return "Sorry! the word was", questionAnswer, ".", "Play Again!\n"
+    print("Sorry! the word was", questionAnswer + ".", "Please Play Again!\n")
 
 
 def main():
@@ -38,7 +38,7 @@ def main():
             continue
 
         if questionNumber == int("-1"):
-            print("Goodbye!")
+            print("Goodbye, thanks for playing!")
             keepGoing = False
             break
 
@@ -65,21 +65,21 @@ def main():
                 userGuess = tryAnswer("Try Again! \n")
                 if isCorrect(userGuess, questionAnswer):
                     print(correctMessage(userGuess, questionAnswer))
-                    break
+                    continue
 
             elif index == len(questionAnswer) - 1:
-                    print("the last letter was", i)
+                    print("the next letter is:", i)
                     print(gameOver(questionAnswer))
-                    break
-
+                    continue
             else:
-                print("The next letter is", i)
+                print("The next letter is:", i)
                 index += 1
+                break
 
 
-                if isCorrect(userGuess, questionAnswer):
-                    print(correctMessage(userGuess, questionAnswer))
-                    break
+            if isCorrect(userGuess, questionAnswer):
+                print(correctMessage(userGuess, questionAnswer))
+                break
 
 
 main()

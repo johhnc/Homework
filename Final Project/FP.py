@@ -9,8 +9,8 @@ def correctMessage(userGuess, questionAnswer):
 def isCorrect(userGuess, questionAnswer):
     if userGuess.lower() == questionAnswer.lower():
         return True
-    else:
-        return False
+    return False
+
 
 def tryAnswer(message):
     return input(message)
@@ -34,7 +34,6 @@ def main():
     while keepGoing:
         try:
             questionNumber = int(getQuestionNumber(introMessage))
-
         except:
             continue
 
@@ -51,10 +50,10 @@ def main():
 
         if isCorrect(userGuess, questionAnswer):
             print(correctMessage(userGuess, questionAnswer))
+            break
 
         else:
             print("that was incorrect!")
-
 
         index = 0
 
@@ -62,7 +61,6 @@ def main():
 
             if index == 0:
                 print("The first letter is:", i)
-                index += 1
                 userGuess = tryAnswer("Try Again!\n")
                 if isCorrect(userGuess, questionAnswer):
                     print(correctMessage(userGuess, questionAnswer))

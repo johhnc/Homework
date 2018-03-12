@@ -50,7 +50,7 @@ def main():
 
         if isCorrect(userGuess, questionAnswer):
             print(correctMessage(userGuess, questionAnswer))
-            break
+            continue
 
         else:
             print("that was incorrect!")

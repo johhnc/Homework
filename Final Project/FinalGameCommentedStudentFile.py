@@ -34,8 +34,7 @@ def correctMessage(userGuess, questionAnswer):
 def isCorrect(userGuess, questionAnswer):
     if userGuess.lower() == questionAnswer.lower():
         return True
-    else:
-        return False
+    return False
 
 # Create a method that accepts a string as a message
 # and asks the user a question with that message (input).
@@ -85,7 +84,9 @@ def main():
     # Begin a while loop that the rest of the game will live inside
     # The while loop should be a terminal loop that will be ended
     # with a break statement later if the user enters a value of "-1"
+
     while keepGoing:
+
         # Using a try/except block, ask the user for a number
         # and convert the result to an integer. Be sure to use
         # the getQuestionNumber method to ask for the number
@@ -147,6 +148,7 @@ def main():
         else:
             print("that was incorrect!")
 
+
             # Create a counter variable to know the current
             # position you are at in the answer word
 
@@ -171,9 +173,7 @@ def main():
                     print("The first letter is:", i)
                     index += 1
                     userGuess = tryAnswer("Try Again! \n")
-                    if isCorrect(userGuess, questionAnswer):
-                        print(correctMessage(userGuess, questionAnswer))
-                        continue
+
 
                 # If this is the last letter, tell them so,
                 # and what the letter is
@@ -195,13 +195,11 @@ def main():
                 # is correct. If the new answer is correct
                 # tell them so using the correctMessage method
                 # and break from the for loop
-
-                else:
-                    print("The next letter is:", i)
-                    index += 1
-                    break
-
                 if isCorrect(userGuess, questionAnswer):
                     print(correctMessage(userGuess, questionAnswer))
+                    break
+                else:
+                    index += 1
+                    print("The next letter is:", i)
                     break
 main()
